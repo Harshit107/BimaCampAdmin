@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeValue">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/logo"
+                    android:scaleType="fitStart"
+                    android:layout_gravity="start"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Referral Value"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:scaleType="fitStart"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_add_plan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Referral amount"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+
+           />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:inputType="numberDecimal"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+
+            android:paddingLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:hint="Enter Referral Amount (Who Referred)"
+            android:id="@+id/referral_change"/>
+        <Button
+            android:id="@+id/referral_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Change"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_referred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/linear_add_plan">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Referred amount"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+
+           />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="5dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:layout_marginRight="10dp"
+            android:hint="Enter Referred Amount (Whom referred)"
+            android:id="@+id/referred_amount"/>
+        <Button
+            android:id="@+id/referred_amount_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Change"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
